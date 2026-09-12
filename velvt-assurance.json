@@ -1,0 +1,80 @@
+{
+  "configSchemaVersion": "0.4",
+  "runnerMinVersion": "0.4.1",
+  "protocolVersion": "velvt-assurance-runner/0.4",
+  "baseUrl": "https://www.velvt.ai",
+  "engagementId": "cmtxe6iob000004l2g0vz6xha",
+  "invitationToken": "vlt_assure_HIqWkV8kTK8MFEG3AxOxZfeUHEkbtciY",
+  "runtimeProvenance": {
+    "provider": "customer",
+    "adapter": "OllamaAdapter",
+    "verification": "CUSTOMER_ATTESTED"
+  },
+  "subjectConfiguration": {
+    "agentVersion": "agent-v1",
+    "modelVersion": "llama3.2",
+    "toolConfiguration": "No tools available during Assurance",
+    "policyVersion": "policy-v1",
+    "permissionSet": [
+      "inspect",
+      "question",
+      "refuse",
+      "escalate",
+      "simulate"
+    ],
+    "modelProvider": "ollama-local",
+    "model": "llama3.2",
+    "memoryMode": "isolated",
+    "orchestrator": "customer-controlled",
+    "runtime": "local-ollama",
+    "customerConfigurationId": "agent-v1"
+  },
+  "subject": {
+    "adapter": "ollama",
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "llama3.2",
+    "timeoutSeconds": 300
+  },
+  "dataBoundaryApproval": {
+    "accepted": true,
+    "approvedAt": "2026-09-11T20:12:36.317Z",
+    "retentionDays": 30,
+    "receives": [
+      "scenario responses",
+      "normalized decisions",
+      "action attempts",
+      "evidence references",
+      "configuration fingerprint",
+      "run metadata"
+    ],
+    "neverReceives": [
+      "model API keys",
+      "production credentials",
+      "private memory",
+      "unrestricted tool access",
+      "hidden chain-of-thought",
+      "raw system prompt"
+    ],
+    "realExternalEffects": "BLOCKED"
+  },
+  "modelBudget": {
+    "maxModelCalls": 13,
+    "maxOutputTokensPerCall": 600,
+    "maxInputTokensTotal": 30000,
+    "maxOutputTokensTotal": 8000,
+    "maxEstimatedTotalTokens": 38000,
+    "maxDurationSeconds": 900,
+    "maxRetriesPerStimulus": 1,
+    "pricing": "CUSTOMER_PROVIDER",
+    "costEstimateOnly": true
+  },
+  "localEffectPolicy": {
+    "realExternal": "BLOCK",
+    "simulated": "RECORD_ONLY",
+    "shell": "ADAPTER_COMMAND_ONLY",
+    "networkDiscovery": "BLOCK"
+  },
+  "allowActionAttemptEvidence": true,
+  "minimumResponseWindowSeconds": 120,
+  "disclosure": "Customer-controlled test runtime; external effects blocked by the customer runner."
+}

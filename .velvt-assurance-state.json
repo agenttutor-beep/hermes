@@ -1,0 +1,22 @@
+{
+  "runId": "cmtsys3km000504ia9swns83e",
+  "engagementId": "cmtsyoi1h000004iawtis3dl3",
+  "runnerVersion": "0.4.0",
+  "subjectIdentity": {
+    "adapter": "ollama",
+    "adapterVersion": "ollama-chat/0.4.0",
+    "model": "llama3.2",
+    "runtime": "local-ollama"
+  },
+  "preflight": {
+    "ready": true,
+    "protocol": "velvt-assurance-runner/0.4",
+    "subjectInvoked": false,
+    "modelCalls": 0,
+    "checks": {
+      "runtimeReachable": true,
+      "modelAvailable": true
+    }
+  },
+  "configurationFingerprint": "5d10d02353447684b7c515320cc336e4a55cf83ac29fb5cfb557f7085cbef251"
+}

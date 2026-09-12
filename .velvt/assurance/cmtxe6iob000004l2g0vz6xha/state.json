@@ -1,0 +1,10 @@
+{
+  "runId": "cmtxel97z000804l2tsnl7866",
+  "engagementId": "cmtxe6iob000004l2g0vz6xha",
+  "runnerVersion": "0.4.1",
+  "phase": "RUNNING",
+  "localRunStartedAt": 1789158199.852948,
+  "modelCalls": 1,
+  "estimatedInputTokens": 1612,
+  "estimatedTokens": 1612
+}
